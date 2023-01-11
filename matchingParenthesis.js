@@ -6,7 +6,7 @@ function matchingParenthesis(input){
         }else if(input[index] == ")"){
             startIndex = indexStorage.pop()
             endIndex = index
-            currentExpression = input.slice(startIndex, endIndex)
+            currentExpression = input.slice(startIndex, endIndex+1)
             console.log(currentExpression)
         }
         
