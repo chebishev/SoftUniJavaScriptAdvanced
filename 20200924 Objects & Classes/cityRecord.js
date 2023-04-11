@@ -1,22 +1,17 @@
-function CityRecord(name, population, treasury){
+function cityRecord(...args){
     output = {
-        name: name,
-        population: population,
-        treasury: treasury  
+        name: args[0],
+        population: args[1],
+        treasury: args[2]
+
     }
-    return output
+    //console.log(output);
+    return output;
 }
-CityRecord('Tortuga',
+cityRecord('Tortuga',
 7000,
 15000)
 
-
-// Inputs:
-
-'Tortuga',
-7000,
-15000
-
-'Santo Domingo',
+cityRecord('Santo Domingo',
 12000,
-23500
+23500)
