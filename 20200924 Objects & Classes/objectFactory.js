@@ -1,7 +1,13 @@
 function factory(library, orders) {
-    return    
+    output = []
+    for (let i = 0; i < orders.length; i++) {
+        product = { name: orders[i].template.name };
+        for (let j = 0; j < orders[i].parts.length; j++) {
+            product[orders[i].parts[j]] = library[orders[i].parts[j]]
+        }
+        output.push(product);
+    } return output
 }
-
 
 const library = {
     print: function () {
